@@ -1,0 +1,109 @@
+<nav>
+    <a href="index.html">Home</a>
+    <a href="meals.html">Meals</a>
+    <a href="recipebook.html">Recipe Book</a>
+    <a href="cart.html">Cart</a>
+</nav>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="page-header">
+
+    <h1>Weekly Meal Planner</h1>
+    
+    <button id="newWeekButton" class="add-button">
+        + New Week
+    </button>
+    
+</div>
+
+
+<div class="home-content">
+
+    <table>
+
+        <thead>
+
+        <tr>
+            <th>Meal</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr>
+
+            <th>Breakfast</th>
+
+            <td class="meal-slot" data-day="Monday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Tuesday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Wednesday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Thursday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Friday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Saturday" data-meal="Breakfast"></td>
+            <td class="meal-slot" data-day="Sunday" data-meal="Breakfast"></td>
+
+        </tr>
+
+        <tr>
+
+            <th>Lunch</th>
+
+            <td class="meal-slot" data-day="Monday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Tuesday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Wednesday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Thursday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Friday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Saturday" data-meal="Lunch"></td>
+            <td class="meal-slot" data-day="Sunday" data-meal="Lunch"></td>
+
+        </tr>
+
+        <tr>
+
+            <th>Dinner</th>
+
+            <td class="meal-slot" data-day="Monday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Tuesday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Wednesday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Thursday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Friday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Saturday" data-meal="Dinner"></td>
+            <td class="meal-slot" data-day="Sunday" data-meal="Dinner"></td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="weekly-meals">
+
+        <h2>Weekly Meals</h2>
+
+        <ul id="weeklyMealsList"></ul>
+
+    </div>
+
+</div>
+
+<script src="js/home.js"></script>
+
+</body>
+</html>

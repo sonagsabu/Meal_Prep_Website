@@ -1,0 +1,350 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,700;1,700&family=Caveat:wght@400;600&display=swap');
+
+/* palette */
+:root {
+    --parchment:       #f5ead6;
+    --parchment-dark:  #e8d5b7;
+    --ink-brown:       #3e2510;
+    --warm-brown:      #6b3f1e;
+    --accent-pink:      #e1a8bf;
+    --muted-sage:      #7a8c6e;
+    --cream-white:     #fdf6ec;
+    --shadow-soft:     rgba(62, 42, 16, 0.15);
+    --border-style:    2px solid var(--warm-brown);
+}
+
+body {
+    font-family: "Lora", Georgia, serif;
+    background-color: var(--parchment);
+    color: var(--ink-brown);
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: "Playfair Display", "Georgia", serif;
+    font-style: italic;
+    color: var(--warm-brown);
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 2.4rem;
+    border-bottom: 2px solid var(--parchment-dark);
+    padding-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+
+nav {
+    background-color: var(--ink-brown);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.04) 0%,
+        transparent 100%
+    );
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 4px solid var(--);
+    box-shadow: 0 3px 12px var(--shadow-soft);
+    position: relative;
+}
+
+
+nav a {
+    font-family: "Caveat", cursive;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--parchment);
+    text-decoration: none;
+    margin: 0 22px;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease, letter-spacing 0.2s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--accent-pink);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+nav a:hover {
+    color: #f9d89a;
+    letter-spacing: 0.08em;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 4px 4px 0px var(--parchment-dark), 6px 6px 0px var(--warm-brown);
+    background-color: var(--cream-white);
+    border: var(--border-style);
+    margin: 0 auto;
+}
+
+th {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    background-color: var(--warm-brown);
+    color: var(--parchment);
+    letter-spacing: 0.06em;
+    padding: 14px 20px;
+    text-transform: none;
+    border-bottom: 2px solid var(--accent-pink);
+}
+
+td {
+    border: 1px solid var(--parchment-dark);
+    padding: 13px 20px;
+    text-align: center;
+    background-color: var(--parchment);
+    transition: background-color 0.2s ease;
+}
+
+td:has(.dish-name-card) {
+    border: none;
+    padding: 0;
+}
+
+tr:hover td {
+    background-color: var(--parchment);
+}
+
+input,
+textarea {
+    font-family: "Lora", serif;
+    font-size: 0.95rem;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid var(--warm-brown);
+    border-left: 2px solid var(--parchment-dark);
+    background-color: var(--cream-white);
+    color: var(--ink-brown);
+    padding: 10px 12px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.06);
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color: var(--accent-pink);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.06), 0 2px 6px var(--shadow-soft);
+}
+
+textarea {
+    height: 110px;
+    resize: vertical;
+    border-bottom: 2px solid var(--warm-brown);
+    border-left: 2px solid var(--parchment-dark);
+    /* Ruled-line effect */
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 27px,
+        rgba(107, 63, 30, 0.1) 27px,
+        rgba(107, 63, 30, 0.1) 28px
+    );
+    line-height: 28px;
+}
+
+/* MEAL SLOT  */
+.meal-slot {
+    height: 54px;
+    cursor: pointer;
+    font-family: "Caveat", cursive;
+    font-size: 1rem;
+    color: var(--warm-brown);
+    background-color: #fdf6ec;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    border-left: 2px solid var(--accent-pink) !important;
+}
+
+.meal-slot:hover {
+    background-color: #faebd5;
+    transform: scale(1.015);
+    z-index: 1;
+    position: relative;
+}
+
+/* PAGE HEADER */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    margin: 0 auto 24px auto;
+}
+
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+
+.add-button {
+    font-family: "Caveat", cursive;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 10px 20px;
+    background-color: var(--warm-brown);
+    color: var(--parchment);
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 3px 3px 0 var(--ink-brown);
+    transition: box-shadow 0.15s ease, transform 0.15s ease, background-color 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: var(--accent-pink);
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--ink-brown);
+}
+
+.add-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--ink-brown);
+}
+
+
+button,
+.add-button {
+    border-radius: 3px;
+}
+
+
+.home-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* WEEKLY MEALS PANEL — sidebar */
+.weekly-meals {
+    width: 210px;
+    background-color: var(--cream-white);
+    border: var(--border-style);
+    border-radius: 3px;
+    padding: 15px 12px;
+    box-shadow: 4px 4px 0 var(--parchment-dark), 6px 6px 0 rgba(107, 63, 30, 0.25);
+    position: relative;
+}
+
+/* corner marks */
+.weekly-meals::before,
+.weekly-meals::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--accent-pink);
+    border-style: solid;
+}
+
+.weekly-meals::before {
+    top: -1px;
+    left: -1px;
+    border-width: 2px 0 0 2px;
+}
+
+.weekly-meals::after {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 2px 2px 0;
+}
+
+.weekly-meals h2 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--warm-brown);
+    color: var(--warm-brown);
+}
+
+.weekly-meals ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weekly-meals li {
+    font-family: "Caveat", cursive;
+    font-size: 1.05rem;
+    color: var(--ink-brown);
+    margin-bottom: 10px;
+    padding-left: 16px;
+    position: relative;
+}
+
+/* Bullet*/
+.weekly-meals li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent-pink);
+    border-radius: 50%;
+}
+
+.dish-name-card {
+    height: 120px;
+    min-height: 200px;
+
+    background-image: url("../images/tupperware2.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.dish-name-card span {
+    position: relative;
+    color: var(--warm-brown);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}

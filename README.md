@@ -2,8 +2,7 @@
 
 A web application designed to help users plan their weekly meals, organize recipes, and create a grocery list.
 
-## Features
-
+FEATURE
 - Create and manage recipes
 - Select meals for the current week
 - Plan breakfast, lunch, and dinner
@@ -11,21 +10,18 @@ A web application designed to help users plan their weekly meals, organize recip
 - Automatically generate a grocery list
 - Save data using localStorage
 
-## Technologies
-
+TECHNOLOGIES
 - HTML
 - CSS
 - JavaScript
 - localStorage
 
-## How to Run
-
+HOW TO RUN
 1. Clone the repository.
 2. Open the project in VS Code.
 3. Open `index.html` in a browser.
 
-## Project Structure
-
+PROJECT STRUCTURE
 ```text
 MealPlanner/
 ├── index.html

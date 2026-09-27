@@ -16,13 +16,8 @@ TECHNOLOGIES
 - JavaScript
 - localStorage
 
-HOW TO RUN
-1. Clone the repository.
-2. Open the project in VS Code.
-3. Open `index.html` in a browser.
-
 PROJECT STRUCTURE
-```text
+
 MealPlanner/
 ├── index.html
 ├── meals.html
